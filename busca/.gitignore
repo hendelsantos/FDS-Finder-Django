@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+*.db
+.DS_Store
+
+# Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.idea/
+.vscode/
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+FDS_Baixados/
+
+# Pytest
+.pytest_cache/
+.cache/
+
+# VSCode
+.vscode/
+.history/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Pipenv
+Pipfile.lock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
