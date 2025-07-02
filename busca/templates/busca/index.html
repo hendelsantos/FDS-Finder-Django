@@ -12,9 +12,18 @@
             <div class="card-body">
                 <h2 class="mb-4 text-center">🔍 Buscar FDS</h2>
 
-                <form method="post" class="mb-4">
+                <form method="post" enctype="multipart/form-data" class="mb-4">
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    <div class="mb-3">
+                        {{ form.nome_produto.label_tag }}
+                        {{ form.nome_produto }}
+                        <div class="form-text">Digite o nome/marca de um produto químico <strong>ou</strong> faça upload de uma lista para busca em lote.</div>
+                    </div>
+                    <div class="mb-3">
+                        {{ form.arquivo_lista.label_tag }}
+                        {{ form.arquivo_lista }}
+                        <div class="form-text">Arquivo .txt (um produto por linha) ou Excel (.xlsx).</div>
+                    </div>
                     <button type="submit" class="btn btn-primary">Buscar FDS</button>
                 </form>
 
@@ -26,17 +35,6 @@
                         {% endfor %}
                         </ul>
                     </div>
-                {% endif %}
-
-                {% if links %}
-                    <h4>Resultados encontrados:</h4>
-                    <ul class="list-group">
-                        {% for link in links %}
-                            <li class="list-group-item">
-                                <a href="{{ link }}" target="_blank">{{ link }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
                 {% endif %}
             </div>
         </div>
